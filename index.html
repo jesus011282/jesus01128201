@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Papelería Emi - Departamentos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /*Los estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  width: 100px;
+}
+.producto {
+    width: 10%;  /* 3 columnas */
+  }
+  header .texto-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -100%); /* centra el texto en el medio del logo */
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  pointer-events: none; /* texto interfiera con los clics sobre el logo */
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+header nav ul li a {
+  color: rgb(249, 246, 246);
+  text-decoration: none;
+  font-size: 18px;
+}
+#productos {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.producto {
+  background-color: rgb(236, 236, 25);
+  padding: 10px;
+  margin: 10px;
+  border: 10px solid #c7ee05;
+  text-align: center;
+}
+.producto img {
+  width: 150px;
+  height: 150px;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+footer {
+  background-color: #0a0a0a;
+  color: white;
+  text-align: center;
+  padding: 100px;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #productos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+
+/* Los estilos para los departamentos */
+#departamentos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.departamento {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.departamento img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.departamento h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.departamento p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* La media queries para hacer la página responsive */
+
+/* La pantallas grandes */
+@media (min-width: 1025px) {
+  #departamento {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  }
+}
+
+/* La pantallas medianas */
+@media (max-width: 1024px) and (min-width: 768px) {
+  #departamentos {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
+
+/* La pantallas pequeñas */
+@media (max-width: 767px) {
+  #departamentos {
+    grid-template-columns: repeat(1, 1fr); /* 1 columnas */
+  }
+  }
+
+</style>
+<body>
+  <!-- Barra de navegación (igual a la página principal) -->
+  <header>
+    <div class="logo">
+      <img src="logo.jpg" alt="Papelería Emi">
+      <h1>Papeleria Emi</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="departamentos.html">Departamentos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- El contenido principal -->
+  <section id="departamentos" class="departamentos">
+    <h2>Nuestros Departamentos</h2>
+    <div class="departamento">
+      <img src="papeleria.jpg" alt="Papel">
+      <h3>Papel</h3>
+      <p>Amplia variedad de papelería para oficinas y escolares.</p>
+    </div>
+    <div class="departamento">
+      <img src="arte.jpg" alt="Arte">
+      <h3>Arte</h3>
+      <p>Materiales para artistas y creativos: pinturas, pinceles y más.</p>
+    </div>
+    <div class="departamento">
+      <img src="oficina.jpg" alt="Oficina">
+      <h3>Oficina</h3>
+      <p>Todo lo necesario para tu espacio de trabajo: escritorios, sillas y más.</p>
+    </div>
+    <div class="departamento">
+      <img src="tecnologia.jpg" alt="Tecnología">
+      <h3>Tecnología</h3>
+      <p>Computadoras, accesorios y gadgets para tu productividad.</p>
+    </div>
+    <div class="departamento">
+      <img src="regalos.jpg" alt="Regalos">
+      <h3>Regalos</h3>
+      <p>Encuentra el regalo perfecto para cualquier ocasión.</p>
+    </div>
+    <div class="departamento">
+      <img src="muebles.jpg" alt="Muebles">
+      <h3>Muebles</h3>
+      <p>Muebles cómodos y funcionales para tu oficina o hogar.</p>
+    </div>
+  </section>
+
+  <!-- Footer (igual a la página principal) -->
+  <footer>
+    
+        <div class="footer-contenido">
+          <div class="footer-columna1">
+            <h2>Av Morelos #2 Col. Centro, Cuernavaca, Morelos </h2>
+        <p>&copy; 2025 Papelería Emi. Todos los derechos reservados.</p>
+            <div class="footer-columna2">
+                <h1>ATENCIÒN AL CLIENTE</h>
+                <p>Teléfono: 777 512 21 13</p>
+                <p>Email: emiliano@papeleriaonline.com</p>
+            </div>
+    <p>© 2025 Papelería Emi  Todos los derechos reservados | Tel: 555-1234-120</p>
+    <h3>Síguenos</h3>
+            <div class="footer-columna">
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon facebook">Facebook</a>
+                <a href="https://facebook.com" target="_blank" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank" class="social-icon instagram">Instagram</a>
+                <a href="https://instagram.com" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon twitter">Twitter</a>
+                <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                
+</div>
+  </footer>
+  
+</body>
+</html>
